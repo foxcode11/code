@@ -53,11 +53,9 @@ void queen(int n)
     }
 }
 
-
 int main()
 {
 int i,n;
-
  cout<<"Enter the number of Queens\n";
  cin>>n;
  queen(n);
