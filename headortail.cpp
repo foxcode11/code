@@ -19,11 +19,10 @@ void flip()
     }
     cout<<"THE NUMBER OF TAILS ARE :"<<c<<endl;
     cout<<"THE NUMBER OF HEADS ARE :"<<(100-c)<<endl;
-
 }
+
 int main()
 {
-
     flip();
     return 0;
 }
