@@ -2,6 +2,12 @@
 struct FCFS{
     int pid,at,bt;
 };
+void swap(int *a,int *b)
+{
+    int t=*a;
+    *a=*b;
+    *b=t;
+}
 int main()
 {
     int n;
@@ -19,16 +25,11 @@ int main()
 	{
 	    int	key = arr[i].at;
 		int j = i - 1;
-
 		while (j >= 0 && arr[j].at > key)
 		{
 			arr[j + 1].at = arr[j].at;
-			int t=arr[j+1].bt;
-			arr[j+1].bt=arr[j].bt;
-			arr[j].bt=t;
-			t=arr[j+1].pid;
-			arr[j+1].pid=arr[j].pid;
-			arr[j].pid=t;
+            swap(&arr[j].bt,&arr[j+1].bt);
+            swap(&arr[j].pid,&arr[j+1].pid);
 			j = j - 1;
 		}
 		arr[j + 1].at = key;
